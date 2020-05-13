@@ -1,0 +1,49 @@
+.note {
+  border: 1px gray solid;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+
+  &::before {
+    margin: -2rem 0 1rem;
+    padding: .4rem 0;
+    display: block;
+    background-color: #ccc;
+    border: 1px gray solid;
+    text-align: center;
+    content: 'Notka';
+    line-height: 1;
+  }
+  
+  &--supplementary {
+    &::before {
+      content: 'Uzupełnienie';
+    }
+  }
+  &--information {
+    border-color: $primary-color;
+    &::before {
+      color: white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      content: 'Informacja';
+    }
+  }
+  &--important {
+    border-color: red;
+    &::before {
+      color: white;
+      border-color: red;
+      background-color: red;
+      content: 'Ważne';
+    }
+  }
+  &--digression {
+    border-color: $primary-color;
+    &::before {
+      background-color: white;
+      border-color: $primary-color;
+      content: 'Dygresja';
+    }
+  }
+}

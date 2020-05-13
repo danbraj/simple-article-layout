@@ -1,0 +1,36 @@
+.definitions {
+  // text-align: center;
+  @include lt460 {
+    text-align: center;
+  }
+}
+dl {
+  margin: 3rem 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+dt {
+  font-size: .9rem;
+  color: lighten(#382c1e, 22%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  @include gt460 {
+    position: relative;
+    left: 0;
+    top: 1.1em;
+    width: 180px;
+  }
+}
+dd {
+  & + dt {
+    margin-top: .8rem;
+  }
+  margin-top: .4rem;
+  @include gt460 {
+    & + dt {
+      margin-top: .4rem;
+    }
+    border-left: 1px solid #000;
+    margin: 0 0 0 200px;
+    padding: 0 0 .5em .5em;
+  }
+}

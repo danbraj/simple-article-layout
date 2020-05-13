@@ -1,0 +1,13 @@
+
+
+:root {
+  --color-light: #fdfdfd;
+  --color-dark: #111;
+  --family-normal: Helvetica,sans-serif;
+  --family-special: Georgia,serif;
+  color: var(--color-dark);
+  // scroll-behavior: smooth;
+  // font-size: calc(1rem + .5vw);
+  font-family: var(--family-normal);
+  // line-height: 1.4;
+}

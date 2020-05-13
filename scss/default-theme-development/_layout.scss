@@ -1,0 +1,67 @@
+.layout {
+  overflow-x: hidden;
+  // NOTE: przeglądarka androidowa wymaga pojemnika (nie działa przy `body`)
+}
+
+.container, .cntr {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2rem 1rem;
+  @include gt900 {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+  }
+  @include gt1200 {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.items-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  // @include lt600 {
+  //   margin: 0 5px;
+  // }
+}
+
+// .list {
+//   margin: 2rem 0;
+//   padding: 0;
+//   li, ol {
+//     display: block;
+//   }
+//   li + li {
+//     margin-top: 1rem;
+//   }
+// }
+
+.cols {
+  // margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  box-sizing: border-box;
+  width: 100%;
+  @include gt900 {
+    width: 50%;
+  }
+  @include lt900 {
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+}
+
+///// ----------------
+
+.header-section, .footer-section {
+  background-color: seagreen;
+  color: #fff;
+  padding: 3rem 1rem;
+}

@@ -1,0 +1,38 @@
+// body, h1, h2, h3, h4, h5, h6,
+// p, blockquote, pre, hr,
+// dl, dd, ol, li, ul, figure {
+//   margin: 0;
+//   padding: 0;
+// }
+dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 320px;
+  overflow-x: auto;
+  @media (min-width: 320px) {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+main {
+  display: block;
+  background-color: white;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+::selection {
+  background-color: #222;
+  color: #f2f2f2;
+}
+img::selection {
+  background-color: rgba(#222, .67);
+}

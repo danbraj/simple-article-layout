@@ -1,0 +1,98 @@
+.image {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  // + .image {
+  //   margin-top: 1rem;
+  // }
+}
+.image__caption {
+  display: block;
+  margin-top: .6rem;
+  font-size: .8rem;
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+  line-height: 1.2;
+  // .gallery--vertical & {
+  //   text-align: left;
+  //   margin-left: 1rem;
+  //   @include lt600 {
+  //     text-align: center;
+  //   }
+  // }
+}
+.image__link {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  // img {
+  //   transition: transform .4s;
+  // }
+  &:hover, &:focus {
+    // img {
+    //   transform: scale(1.03);
+    //   // transform: scale(.98);
+    // }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255,255,255,.1);
+      pointer-events: none;
+    }
+  }
+  &:focus, &:active {
+    img {
+      outline: solid 4px $accent-color;
+      outline-offset: -4px;
+    }
+  }
+}
+
+// modifiers for images
+
+.left {
+  float: left;
+  clear: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.right {
+  float: right;
+  clear: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.left, .right {
+  max-width: 200px;
+
+  @include lt460 {
+    max-width: 100%;
+    margin: 1rem 0;
+    float: none;
+  }
+  @include gt600 {
+    max-width: 280px;
+  }
+  @include gt900 {
+    max-width: 380px;
+  }
+
+  .image {
+    margin: 0;
+  }
+  .image + .image {
+    margin-top: 1rem;
+  }
+}
+
+// @include gt900 {
+//   .w260 {
+//     max-width: 260px;
+//   }
+// }

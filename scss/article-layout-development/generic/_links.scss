@@ -1,0 +1,14 @@
+a {
+  color: $accent-color;
+  text-decoration: none;
+  font-weight: 400;
+
+  &:hover {
+    text-decoration: underline;
+    // color: lighten($accent-color, 20%);
+  }
+  // &:focus {
+  //   color: #fff;
+  //   background-color: $accent-color;
+  // }
+}
