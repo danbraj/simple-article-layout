@@ -1,14 +1,52 @@
 a {
-  color: $accent-color;
-  text-decoration: none;
-  font-weight: 400;
-
-  &:hover {
-    text-decoration: underline;
-    // color: lighten($accent-color, 20%);
-  }
-  // &:focus {
-  //   color: #fff;
-  //   background-color: $accent-color;
+  // color: $accent-color;
+  // text-decoration: none;
+  // font-weight: 400;
+  // &:hover {
+  //   text-decoration: underline;
+  //   // color: lighten($accent-color, 20%);
   // }
+  // // &:focus {
+  // //   color: #fff;
+  // //   background-color: $accent-color;
+  // // }
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+
+%link-style {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  background: linear-gradient(transparent 67%, lighten($primary-color, 10%) 0);
+  &:hover {
+    background: linear-gradient(transparent 50%, lighten($accent-color, 10%) 0);
+    text-decoration: none;
+  }
+  &:focus {
+    background: linear-gradient(transparent 33%, lighten($accent-color, 5%) 0);
+  }
+}
+
+a:not(.button):not(.fn) {
+  @extend %link-style;
+}
+// a:not([class]) {
+//   @extend %link-style;
+// }
+
+.link {
+  @extend %link-style;
+}
+
+.external {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==) center/contain no-repeat;
+  content: '';
+  width: .6rem;
+  height: .6rem;
+  display: inline-block;
+  margin: 0 .2rem 0 .4rem;
 }

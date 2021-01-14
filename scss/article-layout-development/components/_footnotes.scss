@@ -1,0 +1,24 @@
+.footnotes {
+  padding: 0;
+  list-style: none;
+  counter-reset: fns;
+  margin-bottom: 100px;
+
+  font-size: .8rem;
+}
+.footnotes li {
+  margin: 0;
+  counter-increment: fns;
+  padding: 6px;
+  box-sizing: border-box;
+  &:target {
+    // background-color: #eaf2f9;
+    padding: 3px;
+    border: 3px solid $primary-color-lighter;
+  }
+}
+.footnotes li::before {
+  content: counter(fns) ". ";
+  color: $primary-color;
+  font-weight: bold;
+}
